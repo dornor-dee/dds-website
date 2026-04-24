@@ -32,38 +32,56 @@ export default function App() {
         </div>
       </header>
 
-      <section id="home" className="relative overflow-hidden px-6 py-24 text-center">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(250,204,21,0.22),transparent_35%)]"></div>
+      <section id="home" className="px-6 py-24">
+  <div className="max-w-7xl mx-auto grid md:grid-cols-2 items-center gap-10">
 
-        <div className="relative mx-auto max-w-4xl">
-          <p className="mb-5 inline-block rounded-full border border-yellow-400/30 bg-yellow-400/10 px-5 py-2 text-xs font-bold tracking-[0.25em] text-yellow-300">
-            MEDIA • CULTURE • SPORTS • GROWTH
-          </p>
+    {/* LEFT SIDE (TEXT) */}
+    <div>
+      <p className="text-yellow-400 tracking-widest text-sm mb-4">
+        MEDIA • CULTURE • SPORTS • GROWTH
+      </p>
 
-          <h2 className="text-5xl font-black leading-tight md:text-7xl">
-            Double Dee <span className="text-yellow-400">Studios</span>
-          </h2>
+      <h1 className="text-5xl md:text-7xl font-black leading-tight">
+        DOUBLE  <br />
+        DEE <span className="text-yellow-400">STUDIOS</span>
+      </h1>
 
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-white/70">
-            DDS Studios is a creative media brand built for powerful conversations,
-            sports talk, real stories, and next-level motivation.
-          </p>
+      <p className="mt-6 text-gray-400 max-w-md">
+        Powerful conversations. Real stories. Next level mindset.
+      </p>
 
-          <div className="mt-9 flex flex-wrap justify-center gap-4">
-            <a href="#segments" className="rounded-2xl bg-yellow-400 px-7 py-4 font-bold text-black transition hover:scale-105">
-              Explore DDS
-            </a>
-            <a
-              href="https://www.youtube.com/@DoubleDeeStudios"
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-2xl border border-white/20 px-7 py-4 font-bold transition hover:border-yellow-400 hover:text-yellow-400"
-            >
-              Subscribe on YouTube
-            </a>
-          </div>
-        </div>
-      </section>
+      <div className="mt-8 flex flex-wrap gap-4">
+        <a
+          href="#segments"
+          className="bg-yellow-400 text-black px-6 py-3 rounded-lg font-bold hover:scale-105 transition"
+        >
+          Explore DDS
+        </a>
+
+        <a
+          href="https://www.youtube.com/@DoubleDeeStudios"
+          target="_blank"
+          className="border border-white/20 px-6 py-3 rounded-lg font-bold hover:border-yellow-400 hover:text-yellow-400 transition"
+        >
+          Subscribe on YouTube
+        </a>
+      </div>
+    </div>
+
+    
+    {/* RIGHT SIDE (BIG LOGO WITH GLOW) */}
+<div className="flex justify-center relative">
+  <div className="absolute w-80 h-80 bg-yellow-400/10 blur-3xl rounded-full"></div>
+
+  <img
+    src="/DDS ORG.jpeg"
+    alt="DDS Logo"
+    className="relative max-h-[420px] object-contain"
+  />
+</div>
+
+  </div>
+</section>
 
       <section id="about" className="mx-auto max-w-7xl px-6 py-20">
         <div className="grid gap-8 md:grid-cols-2">
