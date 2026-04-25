@@ -7,6 +7,12 @@ export default function App() {
     ["Next Level", "Motivation, leadership, discipline, and self-improvement."],
   ];
 
+  const videos = [
+    "B-GSgNMT2HU",
+    "B-GSgNMT2HU",
+    "B-GSgNMT2HU",
+  ];
+
   return (
     <div className="min-h-screen bg-black text-white">
       <header className="sticky top-0 z-50 border-b border-yellow-400/20 bg-black/90 backdrop-blur">
@@ -27,67 +33,72 @@ export default function App() {
             <a href="#about" className="hover:text-yellow-400">About</a>
             <a href="#segments" className="hover:text-yellow-400">Segments</a>
             <a href="#content" className="hover:text-yellow-400">Videos</a>
+            <a href="#guests" className="hover:text-yellow-400">Guests</a>
             <a href="#contact" className="hover:text-yellow-400">Contact</a>
           </nav>
         </div>
       </header>
 
       <section id="home" className="px-6 py-24">
-  <div className="max-w-7xl mx-auto grid md:grid-cols-2 items-center gap-10">
+        <div className="mx-auto grid max-w-7xl items-center gap-10 md:grid-cols-2">
+          <div className="animate-fadeIn">
+            <p className="mb-4 text-sm tracking-widest text-yellow-400">
+              MEDIA • CULTURE • SPORTS • GROWTH
+            </p>
 
-    {/* LEFT SIDE (TEXT) */}
-    <div>
-      <p className="text-yellow-400 tracking-widest text-sm mb-4">
-        MEDIA • CULTURE • SPORTS • GROWTH
-      </p>
+            <h1 className="text-5xl font-black leading-tight md:text-7xl">
+              DOUBLE <br />
+              DEE <span className="text-yellow-400">STUDIOS</span>
+            </h1>
 
-      <h1 className="text-5xl md:text-7xl font-black leading-tight">
-        DOUBLE  <br />
-        DEE <span className="text-yellow-400">STUDIOS</span>
-      </h1>
+            <p className="mt-6 max-w-md text-gray-400">
+              Powerful conversations. Real stories. Next level mindset.
+            </p>
 
-      <p className="mt-6 text-gray-400 max-w-md">
-        Powerful conversations. Real stories. Next level mindset.
-      </p>
+            <p className="mt-4 font-semibold text-yellow-400">
+          
+            </p>
 
-      <div className="mt-8 flex flex-wrap gap-4">
-        <a
-          href="#segments"
-          className="bg-yellow-400 text-black px-6 py-3 rounded-lg font-bold hover:scale-105 transition"
-        >
-          Explore DDS
-        </a>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <a
+                href="#segments"
+                className="rounded-lg bg-yellow-400 px-6 py-3 font-bold text-black shadow-lg shadow-yellow-500/30 transition hover:scale-105"
+              >
+                Explore DDS
+              </a>
 
-        <a
-          href="https://www.youtube.com/@DoubleDeeStudios"
-          target="_blank"
-          className="border border-white/20 px-6 py-3 rounded-lg font-bold hover:border-yellow-400 hover:text-yellow-400 transition"
-        >
-          Subscribe on YouTube
-        </a>
-      </div>
-    </div>
+              <a
+                href="https://www.youtube.com/@DoubleDeeStudios"
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-lg border border-white/20 px-6 py-3 font-bold transition hover:border-yellow-400 hover:text-yellow-400"
+              >
+                Subscribe on YouTube
+              </a>
+            </div>
+          </div>
 
-    
-    {/* RIGHT SIDE (BIG LOGO WITH GLOW) */}
-<div className="flex justify-center relative">
-  <div className="absolute w-80 h-80 bg-yellow-400/10 blur-3xl rounded-full"></div>
+          <div className="relative flex justify-center">
+            <div className="absolute h-96 w-96 rounded-full bg-yellow-400/30 blur-3xl"></div>
 
-  <img
-    src="/DDS ORG.jpeg"
-    alt="DDS Logo"
-    className="relative max-h-[420px] object-contain"
-  />
-</div>
-
-  </div>
-</section>
+            <img
+              src="/DDS ORG.jpeg"
+              alt="DDS Logo"
+              className="relative max-h-[420px] object-contain"
+            />
+          </div>
+        </div>
+      </section>
 
       <section id="about" className="mx-auto max-w-7xl px-6 py-20">
         <div className="grid gap-8 md:grid-cols-2">
           <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8">
-            <p className="text-sm font-bold tracking-[0.25em] text-yellow-400">ABOUT DDS</p>
-            <h3 className="mt-4 text-4xl font-black">A platform for real voices.</h3>
+            <p className="text-sm font-bold tracking-[0.25em] text-yellow-400">
+              ABOUT DDS
+            </p>
+            <h3 className="mt-4 text-4xl font-black">
+              A platform for real voices.
+            </h3>
             <p className="mt-5 leading-8 text-white/70">
               DDS Studios creates content that entertains, inspires, and connects people.
               From football opinions to deep life conversations, DDS brings energy,
@@ -96,8 +107,12 @@ export default function App() {
           </div>
 
           <div className="rounded-[2rem] border border-yellow-400/20 bg-yellow-400/10 p-8">
-            <p className="text-sm font-bold tracking-[0.25em] text-yellow-300">MISSION</p>
-            <h3 className="mt-4 text-4xl font-black">Inform. Inspire. Entertain.</h3>
+            <p className="text-sm font-bold tracking-[0.25em] text-yellow-300">
+              MISSION
+            </p>
+            <h3 className="mt-4 text-4xl font-black">
+              Inform. Inspire. Entertain.
+            </h3>
             <p className="mt-5 leading-8 text-white/75">
               The goal is to build a media home where culture, sports, lifestyle,
               and personal growth come together in a bold and authentic way.
@@ -108,7 +123,9 @@ export default function App() {
 
       <section id="segments" className="mx-auto max-w-7xl px-6 py-20">
         <div className="mb-10 text-center">
-          <p className="text-sm font-bold tracking-[0.25em] text-yellow-400">DDS SEGMENTS</p>
+          <p className="text-sm font-bold tracking-[0.25em] text-yellow-400">
+            DDS SEGMENTS
+          </p>
           <h3 className="mt-4 text-4xl font-black">Shows & Content Pillars</h3>
         </div>
 
@@ -127,36 +144,67 @@ export default function App() {
 
       <section id="content" className="mx-auto max-w-7xl px-6 py-20">
         <div className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/10 to-yellow-400/10 p-8 text-center md:p-12">
-          <p className="text-sm font-bold tracking-[0.25em] text-yellow-400">LATEST CONTENT</p>
-          <h3 className="mt-4 text-4xl font-black">Latest DDS Video</h3>
+          <p className="text-sm font-bold tracking-[0.25em] text-yellow-400">
+            LATEST CONTENT
+          </p>
+          <h3 className="mt-4 text-4xl font-black">DDS Video Gallery</h3>
 
-          <div className="mt-10 flex justify-center">
-            <iframe
-              width="800"
-              height="450"
-              src="https://www.youtube.com/embed/B-GSgNMT2HU"
-              title="DDS Video"
-              frameBorder="0"
-              allowFullScreen
-              className="w-full max-w-4xl rounded-2xl shadow-lg"
-            ></iframe>
+          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {videos.map((id, i) => (
+              <iframe
+                key={i}
+                src={`https://www.youtube.com/embed/${id}`}
+                title={`DDS Video ${i + 1}`}
+                className="h-60 w-full rounded-2xl shadow-lg"
+                allowFullScreen
+              ></iframe>
+            ))}
           </div>
 
           <a
             href="https://www.youtube.com/@DoubleDeeStudios"
             target="_blank"
             rel="noreferrer"
-            className="mt-8 inline-block rounded-2xl bg-yellow-400 px-7 py-4 font-bold text-black"
+            className="mt-8 inline-block rounded-2xl bg-yellow-400 px-7 py-4 font-bold text-black transition hover:scale-105"
           >
             Watch More on YouTube
           </a>
         </div>
       </section>
 
+      <section id="guests" className="mx-auto max-w-7xl px-6 py-20">
+        <div className="mb-10 text-center">
+          <p className="text-sm font-bold tracking-[0.25em] text-yellow-400">
+            FEATURED GUESTS
+          </p>
+          <h3 className="mt-4 text-4xl font-black">Guest Interviews</h3>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-3">
+          {["Dr. Bryon Dickson", "Creators", "Entrepreneurs"].map((guest) => (
+            <div
+              key={guest}
+              className="rounded-[2rem] border border-white/10 bg-white/5 p-7 text-center"
+            >
+              <div className="mx-auto mb-5 flex h-20 w-20 items-center justify-center rounded-full bg-yellow-400 text-2xl font-black text-black">
+                DDS
+              </div>
+              <h4 className="text-2xl font-black text-yellow-400">{guest}</h4>
+              <p className="mt-4 text-white/60">
+                Powerful conversations with voices that inspire, teach, and challenge the audience.
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <section id="contact" className="mx-auto max-w-7xl px-6 py-20">
         <div className="rounded-[2rem] border border-yellow-400/20 bg-white/5 p-8 md:p-12">
-          <p className="text-sm font-bold tracking-[0.25em] text-yellow-400">CONTACT</p>
+          <p className="text-sm font-bold tracking-[0.25em] text-yellow-400">
+            CONTACT
+          </p>
           <h3 className="mt-4 text-4xl font-black">Work with DDS Studios</h3>
+
           <p className="mt-5 max-w-2xl leading-8 text-white/70">
             For interviews, collaborations, partnerships, guest appearances,
             or business inquiries, connect with DDS Studios.
@@ -186,7 +234,7 @@ export default function App() {
               href="https://www.youtube.com/@DoubleDeeStudios"
               target="_blank"
               rel="noreferrer"
-              className="rounded-2xl border border-white/20 px-6 py-3 font-bold hover:border-yellow-400 hover:text-yellow-400"
+              className="rounded-lg border border-white/20 px-6 py-3 font-bold hover:border-yellow-400 hover:text-yellow-400"
             >
               YouTube
             </a>
@@ -195,25 +243,93 @@ export default function App() {
               href="https://www.instagram.com/doubledeestudios/"
               target="_blank"
               rel="noreferrer"
-              className="rounded-2xl border border-white/20 px-6 py-3 font-bold hover:border-yellow-400 hover:text-yellow-400"
+              className="rounded-lg border border-white/20 px-6 py-3 font-bold hover:border-yellow-400 hover:text-yellow-400"
             >
               Instagram
             </a>
 
             <a
-              href="https://www.tiktok.com/@doubledeestudios?lang=en"
+              href="https://www.tiktok.com/@doubledeestudios"
               target="_blank"
               rel="noreferrer"
-              className="rounded-2xl border border-white/20 px-6 py-3 font-bold hover:border-yellow-400 hover:text-yellow-400"
+              className="rounded-lg border border-white/20 px-6 py-3 font-bold hover:border-yellow-400 hover:text-yellow-400"
             >
               TikTok
             </a>
+          </div>
+
+          <div className="mt-12 rounded-2xl border border-white/10 bg-black/40 p-6">
+            <h4 className="text-2xl font-black text-yellow-400">
+              Book DDS Studios
+            </h4>
+            <p className="mt-2 text-white/60">
+              Send a request for interviews, collaborations, sponsorships, or guest appearances.
+            </p>
+
+            <form
+              action="https://formsubmit.co/doubledeestudio1@gmail.com"
+              method="POST"
+              className="mt-6 grid gap-4"
+            >
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                required
+                className="rounded-xl border border-white/10 bg-black px-4 py-3 text-white outline-none focus:border-yellow-400"
+              />
+
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required
+                className="rounded-xl border border-white/10 bg-black px-4 py-3 text-white outline-none focus:border-yellow-400"
+              />
+
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Phone Number"
+                className="rounded-xl border border-white/10 bg-black px-4 py-3 text-white outline-none focus:border-yellow-400"
+              />
+
+              <select
+                name="request_type"
+                required
+                className="rounded-xl border border-white/10 bg-black px-4 py-3 text-white outline-none focus:border-yellow-400"
+              >
+                <option value="">Select Request Type</option>
+                <option value="Interview">Interview</option>
+                <option value="Collaboration">Collaboration</option>
+                <option value="Sponsorship">Sponsorship</option>
+                <option value="Guest Appearance">Guest Appearance</option>
+                <option value="Other">Other</option>
+              </select>
+
+              <textarea
+                name="message"
+                placeholder="Tell us about your request..."
+                rows="5"
+                required
+                className="rounded-xl border border-white/10 bg-black px-4 py-3 text-white outline-none focus:border-yellow-400"
+              ></textarea>
+
+              <input type="hidden" name="_subject" value="New DDS Studios Booking Request" />
+
+              <button
+                type="submit"
+                className="rounded-xl bg-yellow-400 px-6 py-3 font-bold text-black transition hover:scale-105"
+              >
+                Submit Request
+              </button>
+            </form>
           </div>
         </div>
       </section>
 
       <footer className="border-t border-white/10 py-8 text-center text-sm text-white/50">
-        © 2026 DDS Studios.
+        © 2026 DDS Studios🎙️
       </footer>
     </div>
   );
