@@ -7,10 +7,27 @@ export default function App() {
     ["Next Level", "Motivation, leadership, discipline, and self-improvement."],
   ];
 
-  const videos = [
-    "B-GSgNMT2HU",
-    "B-GSgNMT2HU",
-    "B-GSgNMT2HU",
+  const videos = ["B-GSgNMT2HU", "B-GSgNMT2HU", "B-GSgNMT2HU"];
+
+  const episodes = [
+    {
+      title: "DDS Sports Talk: Football & Opinions",
+      category: "Sports Talk",
+      videoId: "B-GSgNMT2HU",
+      desc: "Football debates, reactions, and bold takes from DDS.",
+    },
+    {
+      title: "Real Convos: Life & Growth",
+      category: "Real Convos",
+      videoId: "B-GSgNMT2HU",
+      desc: "Deep conversations about life, mindset, and culture.",
+    },
+    {
+      title: "Next Level: Discipline & Vision",
+      category: "Next Level",
+      videoId: "B-GSgNMT2HU",
+      desc: "Motivation and personal growth for the next level.",
+    },
   ];
 
   return (
@@ -33,6 +50,7 @@ export default function App() {
             <a href="#about" className="hover:text-yellow-400">About</a>
             <a href="#segments" className="hover:text-yellow-400">Segments</a>
             <a href="#content" className="hover:text-yellow-400">Videos</a>
+            <a href="#episodes" className="hover:text-yellow-400">Episodes</a>
             <a href="#guests" className="hover:text-yellow-400">Guests</a>
             <a href="#contact" className="hover:text-yellow-400">Contact</a>
           </nav>
@@ -53,10 +71,6 @@ export default function App() {
 
             <p className="mt-6 max-w-md text-gray-400">
               Powerful conversations. Real stories. Next level mindset.
-            </p>
-
-            <p className="mt-4 font-semibold text-yellow-400">
-          
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
@@ -93,12 +107,8 @@ export default function App() {
       <section id="about" className="mx-auto max-w-7xl px-6 py-20">
         <div className="grid gap-8 md:grid-cols-2">
           <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8">
-            <p className="text-sm font-bold tracking-[0.25em] text-yellow-400">
-              ABOUT DDS
-            </p>
-            <h3 className="mt-4 text-4xl font-black">
-              A platform for real voices.
-            </h3>
+            <p className="text-sm font-bold tracking-[0.25em] text-yellow-400">ABOUT DDS</p>
+            <h3 className="mt-4 text-4xl font-black">A platform for real voices.</h3>
             <p className="mt-5 leading-8 text-white/70">
               DDS Studios creates content that entertains, inspires, and connects people.
               From football opinions to deep life conversations, DDS brings energy,
@@ -107,12 +117,8 @@ export default function App() {
           </div>
 
           <div className="rounded-[2rem] border border-yellow-400/20 bg-yellow-400/10 p-8">
-            <p className="text-sm font-bold tracking-[0.25em] text-yellow-300">
-              MISSION
-            </p>
-            <h3 className="mt-4 text-4xl font-black">
-              Inform. Inspire. Entertain.
-            </h3>
+            <p className="text-sm font-bold tracking-[0.25em] text-yellow-300">MISSION</p>
+            <h3 className="mt-4 text-4xl font-black">Inform. Inspire. Entertain.</h3>
             <p className="mt-5 leading-8 text-white/75">
               The goal is to build a media home where culture, sports, lifestyle,
               and personal growth come together in a bold and authentic way.
@@ -172,6 +178,49 @@ export default function App() {
         </div>
       </section>
 
+      <section id="episodes" className="mx-auto max-w-7xl px-6 py-20">
+        <div className="mb-10 text-center">
+          <p className="text-sm font-bold tracking-[0.25em] text-yellow-400">
+            DDS EPISODES
+          </p>
+          <h3 className="mt-4 text-4xl font-black">Featured Episodes</h3>
+          <p className="mx-auto mt-4 max-w-2xl text-white/60">
+            Explore conversations across sports, culture, and growth.
+          </p>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-3">
+          {episodes.map((ep) => (
+            <div
+              key={ep.title}
+              className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 transition hover:-translate-y-1 hover:border-yellow-400/50"
+            >
+              <iframe
+                src={`https://www.youtube.com/embed/${ep.videoId}`}
+                title={ep.title}
+                className="h-56 w-full"
+                allowFullScreen
+              ></iframe>
+
+              <div className="p-6">
+                <p className="text-sm font-bold text-yellow-400">{ep.category}</p>
+                <h4 className="mt-3 text-2xl font-black">{ep.title}</h4>
+                <p className="mt-4 leading-7 text-white/60">{ep.desc}</p>
+
+                <a
+                  href={`https://www.youtube.com/watch?v=${ep.videoId}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-6 inline-block rounded-xl bg-yellow-400 px-5 py-3 font-bold text-black"
+                >
+                  Watch Episode
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <section id="guests" className="mx-auto max-w-7xl px-6 py-20">
         <div className="mb-10 text-center">
           <p className="text-sm font-bold tracking-[0.25em] text-yellow-400">
@@ -200,9 +249,7 @@ export default function App() {
 
       <section id="contact" className="mx-auto max-w-7xl px-6 py-20">
         <div className="rounded-[2rem] border border-yellow-400/20 bg-white/5 p-8 md:p-12">
-          <p className="text-sm font-bold tracking-[0.25em] text-yellow-400">
-            CONTACT
-          </p>
+          <p className="text-sm font-bold tracking-[0.25em] text-yellow-400">CONTACT</p>
           <h3 className="mt-4 text-4xl font-black">Work with DDS Studios</h3>
 
           <p className="mt-5 max-w-2xl leading-8 text-white/70">
@@ -230,38 +277,19 @@ export default function App() {
           </div>
 
           <div className="mt-8 flex flex-wrap gap-4">
-            <a
-              href="https://www.youtube.com/@DoubleDeeStudios"
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-lg border border-white/20 px-6 py-3 font-bold hover:border-yellow-400 hover:text-yellow-400"
-            >
+            <a href="https://www.youtube.com/@DoubleDeeStudios" target="_blank" rel="noreferrer" className="rounded-lg border border-white/20 px-6 py-3 font-bold hover:border-yellow-400 hover:text-yellow-400">
               YouTube
             </a>
-
-            <a
-              href="https://www.instagram.com/doubledeestudios/"
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-lg border border-white/20 px-6 py-3 font-bold hover:border-yellow-400 hover:text-yellow-400"
-            >
+            <a href="https://www.instagram.com/doubledeestudios/" target="_blank" rel="noreferrer" className="rounded-lg border border-white/20 px-6 py-3 font-bold hover:border-yellow-400 hover:text-yellow-400">
               Instagram
             </a>
-
-            <a
-              href="https://www.tiktok.com/@doubledeestudios"
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-lg border border-white/20 px-6 py-3 font-bold hover:border-yellow-400 hover:text-yellow-400"
-            >
+            <a href="https://www.tiktok.com/@doubledeestudios" target="_blank" rel="noreferrer" className="rounded-lg border border-white/20 px-6 py-3 font-bold hover:border-yellow-400 hover:text-yellow-400">
               TikTok
             </a>
           </div>
 
           <div className="mt-12 rounded-2xl border border-white/10 bg-black/40 p-6">
-            <h4 className="text-2xl font-black text-yellow-400">
-              Book DDS Studios
-            </h4>
+            <h4 className="text-2xl font-black text-yellow-400">Book DDS Studios</h4>
             <p className="mt-2 text-white/60">
               Send a request for interviews, collaborations, sponsorships, or guest appearances.
             </p>
@@ -271,34 +299,11 @@ export default function App() {
               method="POST"
               className="mt-6 grid gap-4"
             >
-              <input
-                type="text"
-                name="name"
-                placeholder="Your Name"
-                required
-                className="rounded-xl border border-white/10 bg-black px-4 py-3 text-white outline-none focus:border-yellow-400"
-              />
+              <input type="text" name="name" placeholder="Your Name" required className="rounded-xl border border-white/10 bg-black px-4 py-3 text-white outline-none focus:border-yellow-400" />
+              <input type="email" name="email" placeholder="Your Email" required className="rounded-xl border border-white/10 bg-black px-4 py-3 text-white outline-none focus:border-yellow-400" />
+              <input type="tel" name="phone" placeholder="Phone Number" className="rounded-xl border border-white/10 bg-black px-4 py-3 text-white outline-none focus:border-yellow-400" />
 
-              <input
-                type="email"
-                name="email"
-                placeholder="Your Email"
-                required
-                className="rounded-xl border border-white/10 bg-black px-4 py-3 text-white outline-none focus:border-yellow-400"
-              />
-
-              <input
-                type="tel"
-                name="phone"
-                placeholder="Phone Number"
-                className="rounded-xl border border-white/10 bg-black px-4 py-3 text-white outline-none focus:border-yellow-400"
-              />
-
-              <select
-                name="request_type"
-                required
-                className="rounded-xl border border-white/10 bg-black px-4 py-3 text-white outline-none focus:border-yellow-400"
-              >
+              <select name="request_type" required className="rounded-xl border border-white/10 bg-black px-4 py-3 text-white outline-none focus:border-yellow-400">
                 <option value="">Select Request Type</option>
                 <option value="Interview">Interview</option>
                 <option value="Collaboration">Collaboration</option>
@@ -307,20 +312,11 @@ export default function App() {
                 <option value="Other">Other</option>
               </select>
 
-              <textarea
-                name="message"
-                placeholder="Tell us about your request..."
-                rows="5"
-                required
-                className="rounded-xl border border-white/10 bg-black px-4 py-3 text-white outline-none focus:border-yellow-400"
-              ></textarea>
+              <textarea name="message" placeholder="Tell us about your request..." rows="5" required className="rounded-xl border border-white/10 bg-black px-4 py-3 text-white outline-none focus:border-yellow-400"></textarea>
 
               <input type="hidden" name="_subject" value="New DDS Studios Booking Request" />
 
-              <button
-                type="submit"
-                className="rounded-xl bg-yellow-400 px-6 py-3 font-bold text-black transition hover:scale-105"
-              >
+              <button type="submit" className="rounded-xl bg-yellow-400 px-6 py-3 font-bold text-black transition hover:scale-105">
                 Submit Request
               </button>
             </form>
@@ -329,7 +325,7 @@ export default function App() {
       </section>
 
       <footer className="border-t border-white/10 py-8 text-center text-sm text-white/50">
-        © 2026 DDS Studios🎙️
+        © 2026 DDS Studios 🎙️
       </footer>
     </div>
   );
