@@ -7,28 +7,32 @@ export default function App() {
     ["Next Level", "Motivation, leadership, discipline, and self-improvement."],
   ];
 
-  const videos = ["B-GSgNMT2HU", "B-GSgNMT2HU", "B-GSgNMT2HU"];
+  const videos = [
+  "J7C9lyQgK8s",
+  "96NXVq0g0bw",
+  "B-GSgNMT2HU",
+];
 
-  const episodes = [
-    {
-      title: "DDS Sports Talk: Football & Opinions",
-      category: "Sports Talk",
-      videoId: "B-GSgNMT2HU",
-      desc: "Football debates, reactions, and bold takes from DDS.",
-    },
-    {
-      title: "Real Convos: Life & Growth",
-      category: "Real Convos",
-      videoId: "B-GSgNMT2HU",
-      desc: "Deep conversations about life, mindset, and culture.",
-    },
-    {
-      title: "Next Level: Discipline & Vision",
-      category: "Next Level",
-      videoId: "B-GSgNMT2HU",
-      desc: "Motivation and personal growth for the next level.",
-    },
-  ];
+const episodes = [
+  {
+    title: "We Talk Too Much, So We Hit Record",
+    category: "DDS Intro",
+    videoId: "J7C9lyQgK8s",
+    desc: "The beginning of the DDS journey — real conversations, fun energy, and the start of the brand.",
+  },
+  {
+    title: "Football is Broken?! VAR Debate, Arsenal Title Push & Man United",
+    category: "Sports Talk",
+    videoId: "96NXVq0g0bw",
+    desc: "Football debates, VAR opinions, Arsenal title talk, Man United discussion, and bold sports takes.",
+  },
+  {
+    title: "DDS Featured Conversation",
+    category: "Real Convos",
+    videoId: "B-GSgNMT2HU",
+    desc: "A featured DDS conversation focused on real stories, culture, and meaningful discussion.",
+  },
+];
 
   return (
     <div className="min-h-screen bg-black text-white">
