@@ -7,38 +7,41 @@ export default function App() {
     ["Next Level", "Motivation, leadership, discipline, and self-improvement."],
   ];
 
-  const videos = [
-  "J7C9lyQgK8s",
-  "96NXVq0g0bw",
-  "B-GSgNMT2HU",
-];
+  const videos = ["J7C9lyQgK8s", "96NXVq0g0bw", "B-GSgNMT2HU"];
 
-const episodes = [
-  {
-    title: "We Talk Too Much, So We Hit Record",
-    category: "DDS Intro",
-    videoId: "J7C9lyQgK8s",
-    desc: "The beginning of the DDS journey — real conversations, fun energy, and the start of the brand.",
-  },
-  {
-    title: "Football is Broken?! VAR Debate, Arsenal Title Push & Man United",
-    category: "Sports Talk",
-    videoId: "96NXVq0g0bw",
-    desc: "Football debates, VAR opinions, Arsenal title talk, Man United discussion, and bold sports takes.",
-  },
-  {
-    title: "DDS Featured Conversation",
-    category: "Real Convos",
-    videoId: "B-GSgNMT2HU",
-    desc: "A featured DDS conversation focused on real stories, culture, and meaningful discussion.",
-  },
-];
+  const episodes = [
+    {
+      title: "We Talk Too Much, So We Hit Record",
+      category: "DDS Intro",
+      videoId: "J7C9lyQgK8s",
+      desc: "The beginning of the DDS journey — real conversations, fun energy, and the start of the brand.",
+    },
+    {
+      title: "Football is Broken?! VAR Debate, Arsenal Title Push & Man United",
+      category: "Sports Talk",
+      videoId: "96NXVq0g0bw",
+      desc: "Football debates, VAR opinions, Arsenal title talk, Man United discussion, and bold sports takes.",
+    },
+    {
+      title: "DDS Featured Conversation",
+      category: "Real Convos",
+      videoId: "B-GSgNMT2HU",
+      desc: "A featured DDS conversation focused on real stories, culture, and meaningful discussion.",
+    },
+  ];
+
+  const stats = [
+    ["Media Brand", "Identity"],
+    ["3+", "Published Videos"],
+    ["5", "Content Pillars"],
+    ["24/7", "Digital Presence"],
+  ];
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen scroll-smooth bg-black text-white">
       <header className="sticky top-0 z-50 border-b border-yellow-400/20 bg-black/90 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-          <div className="flex items-center gap-3">
+          <a href="#home" className="flex items-center gap-3">
             <img
               src="/DDS ORG.jpeg"
               alt="DDS Logo"
@@ -47,9 +50,9 @@ const episodes = [
             <p className="hidden text-xs tracking-[0.3em] text-white/60 sm:block">
               DOUBLE DEE STUDIOS
             </p>
-          </div>
+          </a>
 
-          <nav className="hidden gap-8 text-sm font-medium md:flex">
+          <nav className="hidden gap-7 text-sm font-medium md:flex">
             <a href="#home" className="hover:text-yellow-400">Home</a>
             <a href="#about" className="hover:text-yellow-400">About</a>
             <a href="#segments" className="hover:text-yellow-400">Segments</a>
@@ -61,10 +64,12 @@ const episodes = [
         </div>
       </header>
 
-      <section id="home" className="px-6 py-24">
-        <div className="mx-auto grid max-w-7xl items-center gap-10 md:grid-cols-2">
-          <div className="animate-fadeIn">
-            <p className="mb-4 text-sm tracking-widest text-yellow-400">
+      <section id="home" className="relative overflow-hidden px-6 py-24">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(250,204,21,0.16),transparent_35%)]"></div>
+
+        <div className="relative mx-auto grid max-w-7xl items-center gap-12 md:grid-cols-2">
+          <div>
+            <p className="mb-4 text-sm font-bold tracking-widest text-yellow-400">
               MEDIA • CULTURE • SPORTS • GROWTH
             </p>
 
@@ -73,23 +78,24 @@ const episodes = [
               DEE <span className="text-yellow-400">STUDIOS</span>
             </h1>
 
-            <p className="mt-6 max-w-md text-gray-400">
-              Powerful conversations. Real stories. Next level mindset.
+            <p className="mt-6 max-w-xl text-lg leading-8 text-white/70">
+              A creative media platform built for powerful conversations, sports talk,
+              real stories, culture, and next-level motivation.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
               <a
-                href="#segments"
-                className="rounded-lg bg-yellow-400 px-6 py-3 font-bold text-black shadow-lg shadow-yellow-500/30 transition hover:scale-105"
+                href="#episodes"
+                className="rounded-xl bg-yellow-400 px-7 py-4 font-bold text-black shadow-lg shadow-yellow-500/30 transition hover:scale-105"
               >
-                Explore DDS
+                Watch Episodes
               </a>
 
               <a
                 href="https://www.youtube.com/@DoubleDeeStudios"
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-lg border border-white/20 px-6 py-3 font-bold transition hover:border-yellow-400 hover:text-yellow-400"
+                className="rounded-xl border border-white/20 px-7 py-4 font-bold transition hover:border-yellow-400 hover:text-yellow-400"
               >
                 Subscribe on YouTube
               </a>
@@ -97,14 +103,24 @@ const episodes = [
           </div>
 
           <div className="relative flex justify-center">
-            <div className="absolute h-96 w-96 rounded-full bg-yellow-400/30 blur-3xl"></div>
-
+            <div className="absolute h-96 w-96 rounded-full bg-yellow-400/25 blur-3xl"></div>
             <img
               src="/DDS ORG.jpeg"
               alt="DDS Logo"
-              className="relative max-h-[420px] object-contain"
+              className="relative max-h-[430px] object-contain"
             />
           </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 pb-14">
+        <div className="grid gap-4 md:grid-cols-4">
+          {stats.map(([big, small]) => (
+            <div key={big} className="rounded-2xl border border-white/10 bg-white/5 p-5 text-center">
+              <p className="text-2xl font-black text-yellow-400">{big}</p>
+              <p className="mt-1 text-sm text-white/55">{small}</p>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -124,8 +140,8 @@ const episodes = [
             <p className="text-sm font-bold tracking-[0.25em] text-yellow-300">MISSION</p>
             <h3 className="mt-4 text-4xl font-black">Inform. Inspire. Entertain.</h3>
             <p className="mt-5 leading-8 text-white/75">
-              The goal is to build a media home where culture, sports, lifestyle,
-              and personal growth come together in a bold and authentic way.
+              DDS is built to become a media home where culture, sports, lifestyle,
+              personality, and personal growth come together in a bold and authentic way.
             </p>
           </div>
         </div>
@@ -133,9 +149,7 @@ const episodes = [
 
       <section id="segments" className="mx-auto max-w-7xl px-6 py-20">
         <div className="mb-10 text-center">
-          <p className="text-sm font-bold tracking-[0.25em] text-yellow-400">
-            DDS SEGMENTS
-          </p>
+          <p className="text-sm font-bold tracking-[0.25em] text-yellow-400">DDS SEGMENTS</p>
           <h3 className="mt-4 text-4xl font-black">Shows & Content Pillars</h3>
         </div>
 
@@ -154,9 +168,7 @@ const episodes = [
 
       <section id="content" className="mx-auto max-w-7xl px-6 py-20">
         <div className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/10 to-yellow-400/10 p-8 text-center md:p-12">
-          <p className="text-sm font-bold tracking-[0.25em] text-yellow-400">
-            LATEST CONTENT
-          </p>
+          <p className="text-sm font-bold tracking-[0.25em] text-yellow-400">LATEST CONTENT</p>
           <h3 className="mt-4 text-4xl font-black">DDS Video Gallery</h3>
 
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -184,60 +196,55 @@ const episodes = [
 
       <section id="episodes" className="mx-auto max-w-7xl px-6 py-20">
         <div className="mb-10 text-center">
-          <p className="text-sm font-bold tracking-[0.25em] text-yellow-400">
-            DDS EPISODES
-          </p>
+          <p className="text-sm font-bold tracking-[0.25em] text-yellow-400">DDS EPISODES</p>
           <h3 className="mt-4 text-4xl font-black">Featured Episodes</h3>
           <p className="mx-auto mt-4 max-w-2xl text-white/60">
-            Explore conversations across sports, culture, and growth.
+            Explore conversations across sports, culture, real stories, and growth.
           </p>
         </div>
 
         <div className="grid gap-6 md:grid-cols-3">
           {episodes.map((ep) => (
-            <div
+            <a
               key={ep.title}
-              className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 transition hover:-translate-y-1 hover:border-yellow-400/50"
+              href={`https://www.youtube.com/watch?v=${ep.videoId}`}
+              target="_blank"
+              rel="noreferrer"
+              className="group block overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 transition hover:-translate-y-1 hover:border-yellow-400/50"
             >
-              <img
-  src={`https://img.youtube.com/vi/${ep.videoId}/maxresdefault.jpg`}
-  alt={ep.title}
-  className="h-56 w-full object-cover"
-/>
+              <div className="relative">
+                <img
+                  src={`https://img.youtube.com/vi/${ep.videoId}/maxresdefault.jpg`}
+                  alt={ep.title}
+                  className="h-56 w-full object-cover transition duration-300 group-hover:scale-105"
+                />
+
+                <div className="absolute inset-0 flex items-center justify-center bg-black/20">
+                  <div className="rounded-full bg-black/75 px-5 py-4 text-2xl transition group-hover:scale-110 group-hover:bg-yellow-400 group-hover:text-black">
+                    ▶
+                  </div>
+                </div>
+              </div>
 
               <div className="p-6">
                 <p className="text-sm font-bold text-yellow-400">{ep.category}</p>
                 <h4 className="mt-3 text-2xl font-black">{ep.title}</h4>
                 <p className="mt-4 leading-7 text-white/60">{ep.desc}</p>
-
-                <a
-                  href={`https://www.youtube.com/watch?v=${ep.videoId}`}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="mt-6 inline-block rounded-xl bg-yellow-400 px-5 py-3 font-bold text-black"
-                >
-                  Watch Episode
-                </a>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </section>
 
       <section id="guests" className="mx-auto max-w-7xl px-6 py-20">
         <div className="mb-10 text-center">
-          <p className="text-sm font-bold tracking-[0.25em] text-yellow-400">
-            FEATURED GUESTS
-          </p>
+          <p className="text-sm font-bold tracking-[0.25em] text-yellow-400">FEATURED GUESTS</p>
           <h3 className="mt-4 text-4xl font-black">Guest Interviews</h3>
         </div>
 
         <div className="grid gap-6 md:grid-cols-3">
           {["Dr. Bryon Dickson", "Creators", "Entrepreneurs"].map((guest) => (
-            <div
-              key={guest}
-              className="rounded-[2rem] border border-white/10 bg-white/5 p-7 text-center"
-            >
+            <div key={guest} className="rounded-[2rem] border border-white/10 bg-white/5 p-7 text-center">
               <div className="mx-auto mb-5 flex h-20 w-20 items-center justify-center rounded-full bg-yellow-400 text-2xl font-black text-black">
                 DDS
               </div>
@@ -297,11 +304,7 @@ const episodes = [
               Send a request for interviews, collaborations, sponsorships, or guest appearances.
             </p>
 
-            <form
-              action="https://formsubmit.co/doubledeestudio1@gmail.com"
-              method="POST"
-              className="mt-6 grid gap-4"
-            >
+            <form action="https://formsubmit.co/doubledeestudio1@gmail.com" method="POST" className="mt-6 grid gap-4">
               <input type="text" name="name" placeholder="Your Name" required className="rounded-xl border border-white/10 bg-black px-4 py-3 text-white outline-none focus:border-yellow-400" />
               <input type="email" name="email" placeholder="Your Email" required className="rounded-xl border border-white/10 bg-black px-4 py-3 text-white outline-none focus:border-yellow-400" />
               <input type="tel" name="phone" placeholder="Phone Number" className="rounded-xl border border-white/10 bg-black px-4 py-3 text-white outline-none focus:border-yellow-400" />
