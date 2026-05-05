@@ -465,6 +465,20 @@ export default function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/episodes/:slug" element={<EpisodePage />} />
       </Routes>
+      <section className="text-center py-20">
+  <h2 className="text-4xl font-black">Join The DDS Movement</h2>
+  <p className="mt-4 text-white/60">
+    Subscribe, follow, and be part of the conversations.
+  </p>
+
+  <a
+    href="https://www.youtube.com/@DoubleDeeStudios"
+    target="_blank"
+    className="mt-6 inline-block bg-yellow-400 px-8 py-4 rounded-xl font-bold text-black"
+  >
+    Subscribe Now
+  </a>
+</section>
 
       <footer className="border-t border-white/10 py-8 text-center text-sm text-white/50">
         © 2026 DDS Studios 🎙️
