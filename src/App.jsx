@@ -195,12 +195,11 @@ export default function App() {
               key={ep.title}
               className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 transition hover:-translate-y-1 hover:border-yellow-400/50"
             >
-              <iframe
-                src={`https://www.youtube.com/embed/${ep.videoId}`}
-                title={ep.title}
-                className="h-56 w-full"
-                allowFullScreen
-              ></iframe>
+              <img
+  src={`https://img.youtube.com/vi/${ep.videoId}/maxresdefault.jpg`}
+  alt={ep.title}
+  className="h-56 w-full object-cover"
+/>
 
               <div className="p-6">
                 <p className="text-sm font-bold text-yellow-400">{ep.category}</p>
